@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct UsersAppApp: App {
+    private let container = DIContainer()
     var body: some Scene {
         WindowGroup {
-            Text("Users List View here")
+            UserListView(viewModel: container.makeUserListViewModel())
         }
     }
 
