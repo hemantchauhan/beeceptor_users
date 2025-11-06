@@ -62,7 +62,11 @@ struct UserListView: View {
                                         .scaledToFill()
                                         .frame(width: 50, height: 50)
                                 case .failure:
-                                    Image(systemName: "exclamationmark.triangle.fill")
+                                    Image(systemName: "person.circle.fill")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 50, height: 50)
+                                        .foregroundColor(.gray)
                                 @unknown default:
                                     EmptyView()
                                 }

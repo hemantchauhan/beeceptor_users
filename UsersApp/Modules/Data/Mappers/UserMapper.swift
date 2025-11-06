@@ -9,7 +9,7 @@ import Foundation
 
 struct UserDataMapper {
     static func map(_ data: UserData) -> User {
-        User(id: data.id, name: data.name, username: data.username, email: data.email, photo: data.phone)
+        User(id: data.id, name: data.name, username: data.username, email: data.email, photo: data.photo)
     }
     
     static func mapToDetail(_ data: UserData) -> UserDetail {
