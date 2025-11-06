@@ -44,10 +44,10 @@ class DIContainer {
     
     // MARK: - Domain Layer - ViewModels
     @MainActor func makeUserListViewModel() -> UserListViewModel {
-        return UserListViewModel(repository: userListRepository)
+        return UserListViewModel(repository: userListRepository, diContainer: self)
     }
     
-//    func makeDetailViewModel() -> UserdetailVi {
-//        return DetailViewModel(repository: itemDetailRepository)
-//    }
+    @MainActor func makeUserDetailViewModel(userId: Int) -> UserDetailViewModel {
+        return UserDetailViewModel(repository: userDetailRepository, userId: userId)
+    }
 }
